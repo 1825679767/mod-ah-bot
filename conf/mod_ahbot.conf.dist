@@ -1,43 +1,42 @@
 [worldserver]
 
 ###############################################################################
-# AUCTION HOUSE BOT SETTINGS
+# 拍卖行机器人设置
 #
 #    AuctionHouseBot.DEBUG
-#        Enable/Disable Debugging output
-#    Default 0 (disabled)
+#        启用/禁用调试输出
+#    默认 0（禁用）
 #
 #    AuctionHouseBot.DEBUG_FILTERS
-#        Enable/Disable Debugging output from Filters
-#    Default 0 (disabled)
+#        启用/禁用来自过滤器的调试输出
+#    默认 0（禁用）
 #
 #    AuctionHouseBot.EnableSeller
-#        Enable/Disable the part of AHBot that puts items up for auction
-#    Default 0 (disabled)
+#        启用/禁用 AHBot 中负责拍卖物品的部分
+#    默认 0（禁用）
 #
 #    AuctionHouseBot.EnableBuyer
-#        Enable/Disable the part of AHBot that buys items from players
-#    Default 0 (disabled)
+#        启用/禁用 AHBot 中从玩家购买物品的部分
+#    默认 0（禁用）
 #
 #    AuctionHouseBot.UseBuyPriceForSeller
-#        Should the Seller use BuyPrice or SellPrice to determine Bid Prices
-#    Default 0 (use SellPrice)
+#        卖家是否使用购买价格还是销售价格确定竞标价格
+#    默认 0（使用销售价格）
 #
 #    AuctionHouseBot.UseBuyPriceForBuyer
-#        Should the Buyer use BuyPrice or SellPrice to determine Bid Prices
-#    Default 0 (use SellPrice)
+#        买家是否使用购买价格还是销售价格确定竞标价格
+#    默认 0（使用销售价格）
 #
-#    Auction House Bot character data
-#        AuctionHouseBot.Account is the account number
-#         (in realmd->account table) of the player you want to run
-#         as the auction bot.
-#        AuctionHouseBot.GUID is the GUID (in characters->characters table)
-#         of the player you want to run as the auction bot.
-#    Default: 0 (Auction House Bot disabled)
+#    拍卖行机器人角色数据
+#        AuctionHouseBot.Account 是您要将其作为拍卖机器人运行的玩家的账号编号
+#         (在 realmd->account 表中)
+#        AuctionHouseBot.GUID 是您要将其作为拍卖机器人运行的玩家的 GUID
+#         (在 characters->characters 表中)
+#    默认: 0（拍卖行机器人已禁用）
 #
 #    AuctionHouseBot.ItemsPerCycle
-#        Number of Items to Add/Remove from the AH during mass operations
-#    Default 200
+#        大规模操作期间在拍卖行中添加/移除的物品数量
+#    默认 200
 #
 ###############################################################################
 
@@ -52,83 +51,83 @@ AuctionHouseBot.GUID = 0
 AuctionHouseBot.ItemsPerCycle = 200
 
 ###############################################################################
-# AUCTION HOUSE BOT FILTERS PART 1
+# 拍卖行机器人过滤器 第1部分
 #
 #    AuctionHouseBot.VendorItems
-#        Include items that can be bought from vendors.
-#    Default 0 (False)
+#        包括可以从供应商购买的物品。
+#    默认 0（False）
 #
 #    AuctionHouseBot.VendorTradeGoods
-#        Include Trade Goods that can be bought from vendors.
-#    Default 0 (False)
+#        包括可以从供应商购买的商品。
+#    默认 0（False）
 #
 #    AuctionHouseBot.LootItems
-#        Include items that can be looted or fished for.
-#    Default 1 (True)
+#        包括可以拾取或钓到的物品。
+#    默认 1（True）
 #
 #    AuctionHouseBot.LootTradeGoods
-#        Include Trade Goods that can be looted or fished for.
-#    Default 1 (True)
+#        包括可以拾取或钓到的商品。
+#    默认 1（True）
 #
 #    AuctionHouseBot.OtherItems
-#        Include misc. items.
-#    Default 0 (False)
+#        包括其他物品。
+#    默认 0（False）
 #
 #    AuctionHouseBot.OtherTradeGoods
-#        Include misc. Trade Goods.
-#    Default 0 (False)
+#        包括其他商品。
+#    默认 0（False）
 #
 #    AuctionHouseBot.Bonding_types
-#        Indicates which bonding types to allow seller to put up for auction
+#        指示允许卖家拍卖的结合类型
 #            No_Bind
-#             Default 1 (True)
+#             默认 1（True）
 #            Bind_When_Picked_Up
-#             Default 0 (False)
+#             默认 0（False）
 #            Bind_When_Equipped
-#             Default 1 (True)
+#             默认 1（True）
 #            Bind_When_Use
-#             Default 1 (True)
+#             默认 1（True）
 #            Bind_Quest_Item
-#             Default 0 (False)
+#             默认 0（False）
 #
 #    AuctionHouseBot.DisablePermEnchant
-#        Disable Items with a Permanent Enchantment
-#    Default 0 (False)
+#        禁用具有永久附魔的物品
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableConjured
-#        Disable Conjured Items
-#    Default 0 (False)
+#        禁用魔法制造的物品
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableGems
-#        Disable Gems
-#    Default 0 (False)
+#        禁用宝石
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableMoney
-#        Disable Items that are used as money
-#    Default 0 (False)
+#        禁用作为货币使用的物品
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableMoneyLoot
-#        Disable Items that have Money as a loot
-#    Default 0 (False)
+#        禁用作为战利品的货币物品
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableLootable
-#        Disable Items that have other items as loot
-#    Default 0 (False)
+#        禁用具有其他物品作为战利品的物品
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableKeys
-#        Disable Items that are keys
-#    Default 0 (False)
+#        禁用钥匙物品
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableDuration
-#        Disable Items with a duration
-#    Default 0 (False)
+#        禁用具有持续时间的物品
+#    默认 0（False）
 #
 #    AuctionHouseBot.DisableBOP_Or_Quest_NoReqLevel
-#        Disable items that are BOP or Quest Item
-#        with a Required level that is less than the Item Level
-#        (This prevents a level 10 with a level 60 weapon or armor)
-#        (May need further refinement)
-#    Default 0 (False)
+#        禁用具有 BOP 或任务物品的物品
+#        其所需等级小于物品等级
+#        (这样可以防止等级为10的玩家使用等级为60的武器或盔甲)
+#        (可能需要进一步细化)
+#    默认 0（False）
 #
 ###############################################################################
 
@@ -154,12 +153,11 @@ AuctionHouseBot.DisableDuration = 0
 AuctionHouseBot.DisableBOP_Or_Quest_NoReqLevel = 0
 
 ###############################################################################
-# AUCTION HOUSE BOT FILTERS PART 2
+# 拍卖行机器人过滤器 第2部分
 #
-#     These Filters are boolean (0 or 1) and will disable items that are
-#     specifically meant for the Class named.
-#     (UnusedClass is Class 10, which was skipped for some reason)
-#     Default 0 (allowed)
+#     这些过滤器是布尔值（0 或 1），将禁用专门用于命名的职业的物品。
+#     (UnusedClass 是职业 10，由于某种原因被跳过)
+#     默认 0（允许）
 #
 ###############################################################################
 
@@ -176,75 +174,75 @@ AuctionHouseBot.DisableUnusedClassItems = 0
 AuctionHouseBot.DisableDruidItems = 0
 
 ###############################################################################
-# AUCTION HOUSE BOT FILTERS PART 3
+# 拍卖行机器人过滤器 第3部分
 #
 #    AuctionHouseBot.DisabledItems
-#        Prevent Seller from listing specific item(s)
-#        (not used anymore, see table "mod_auctionhousebot_disabled_items")
+#        防止卖家列出特定物品
+#        (不再使用，参见表 "mod_auctionhousebot_disabled_items")
 #
 #    AuctionHouseBot.DisableItemsBelowLevel
-#        Prevent Seller from listing Items below this Level
-#    Default 0 (Off)
+#        防止卖家列出低于此等级的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableItemsAboveLevel
-#        Prevent Seller from listing Items above this Level
-#    Default 0 (Off)
+#        防止卖家列出高于此等级的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsBelowLevel
-#        Prevent Seller from listing Trade Goods below this Level
-#    Default 0 (Off)
+#        防止卖家列出低于此等级的商品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsAboveLevel
-#        Prevent Seller from listing Trade Goods above this Level
-#    Default 0 (Off)
+#        防止卖家列出高于此等级的商品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableItemsBelowGUID
-#        Prevent Seller from listing Items below this GUID
-#    Default 0 (Off)
+#        防止卖家列出低于此 GUID 的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableItemsAboveGUID
-#        Prevent Seller from listing Items above this GUID
-#    Default 0 (Off)
+#        防止卖家列出高于此 GUID 的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsBelowGUID
-#        Prevent Seller from listing Trade Goods below this GUID
-#    Default 0 (Off)
+#        防止卖家列出低于此 GUID 的商品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsAboveGUID
-#        Prevent Seller from listing Trade Goods above this GUID
-#    Default 0 (Off)
+#        防止卖家列出高于此 GUID 的商品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableItemsBelowReqLevel
-#        Prevent Seller from listing Items below this Required Level
-#    Default 0 (Off)
+#        防止卖家列出低于此所需等级的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableItemsAboveReqLevel
-#        Prevent Seller from listing Items above this Required Level
-#    Default 0 (Off)
+#        防止卖家列出高于此所需等级的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsBelowReqLevel
-#        Prevent Seller from listing Trade Goods below this Required Level
-#    Default 0 (Off)
+#        防止卖家列出低于此所需等级的商品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsAboveReqLevel
-#        Prevent Seller from listing Trade Goods above this Required Level
-#    Default 0 (Off)
+#        防止卖家列出高于此所需等级的商品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableItemsBelowReqSkillRank
-#        Prevent Seller from listing Items below this Required Skill Rank
-#    Default 0 (Off)
+#        防止卖家列出低于此所需技能等级的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableItemsAboveReqSkillRank
-#        Prevent Seller from listing Items above this Required Skill Rank
-#    Default 0 (Off)
+#        防止卖家列出高于此所需技能等级的物品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsBelowReqSkillRank
-#        Prevent Seller from listing Trade Goods below this Required Skill Rank
-#    Default 0 (Off)
+#        防止卖家列出低于此所需技能等级的商品
+#    默认 0（关闭）
 #
 #    AuctionHouseBot.DisableTGsAboveReqSkillRank
-#        Prevent Seller from listing Trade Goods above this Required Skill Rank
-#    Default 0 (Off)
+#        防止卖家列出高于此所需技能等级的商品
+#    默认 0（关闭）
 #
 ###############################################################################
 
